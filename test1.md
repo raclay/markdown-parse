@@ -1,4 +1,3 @@
-# Test
-
+# Test [a link!](www.google.com)
 [a link!](www.google.com)
-[another link!](www.google.com)
+[[(another link!)]](www.google.com)
