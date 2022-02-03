@@ -27,6 +27,16 @@ public class MarkdownParseTest {
 
         assertEquals(List.of("www.google.com", "www.google.com", "www.google.com"), MarkdownParse.getLinks(contents));
     }
+    
+    @Test
+    public void links() throws IOException {
+
+		Path fileName = Path.of("test-file.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        List<String> output = List.of("https://something.com", "some-page.html");
+        assertEquals(output, links);
+    }
 
    
 }
