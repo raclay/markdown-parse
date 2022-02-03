@@ -28,6 +28,11 @@ public class MarkdownParseTest {
         assertEquals(List.of("www.google.com", "www.google.com", "www.google.com"), MarkdownParse.getLinks(contents));
     }
     
-
+    @Test
+    public void testingLab() throws IOException{
+        Path fileName = Path.of("week5LabTest.md");
+        String contents = Files.readString(fileName);
+        assertEquals(List.of(), MarkdownParse.getLinks(contents));
+    }
    
 }
