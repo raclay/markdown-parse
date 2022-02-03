@@ -9,9 +9,9 @@ import java.util.List;
 public class MarkdownParseTest {
     @Test
     public void addition() {
-        assertEquals(2, 1 + 1);
+        assertEquals(1, 1 + 1);
     }
-
+/*
     @Test
     public void testing1() throws IOException{
         Path fileName = Path.of("test1.md");
@@ -37,6 +37,6 @@ public class MarkdownParseTest {
         List<String> output = List.of("https://something.com", "some-page.html");
         assertEquals(output, links);
     }
-
+*/
    
 }
