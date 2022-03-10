@@ -23,13 +23,15 @@ public class MarkdownParse {
 
             if (nextOpenBracket != 0) {
                 if (markdown.charAt(nextOpenBracket-1) != '!') {
-                    if (! markdown.substring(openParen + 1, closeParen).contains(" ")) {
+                    if (! markdown.substring(openParen + 1, closeParen).contains(" ") && ! markdown.substring(openParen + 1, closeParen).contains("\n")) {
                         toReturn.add(markdown.substring(openParen + 1, closeParen));    
                     }
                 }
             }
             else {
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
+                if (! markdown.substring(openParen + 1, closeParen).contains(" ") && ! markdown.substring(openParen + 1, closeParen).contains("\n")) {
+                    toReturn.add(markdown.substring(openParen + 1, closeParen));    
+                }
             }
 
             currentIndex = closeParen + 1;
